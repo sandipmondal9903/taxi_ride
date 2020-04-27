@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Prediction</title>
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+<header>
+<div class="hero">
+</div>
+<form class="box" action="{{url_for('predict')}}" method="post">
+<h1 style="color:#00FFFF">TAXI WEEKLY RIDE ANALYSIS</h1>
+<input type="text" name="PRICE PER WEEK" placeholder="PRICE PER WEEK" required="required" />
+<input type="text" name="POPULATION" placeholder="POPULATION" required="required" />
+<input type="text" name="MONTHLY INCOME" placeholder="MONTHLY INCOME" required="required" />
+<input type="text" name="AVERAGE PARKING PER MONTH" placeholder="AVERAGE PARKING PER MONTH" required="required" />
+<button type="submit" class ="btn">PREDICT</button>
+<br>
+
+<br>
+
+
+<p style="color:#7FFF00">{{ prediction_text }}</p>
+
+</form>
+</header>
+
+</body>
+</html>
